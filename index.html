@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="bs">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+        <title>Lucha</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .kartica img { padding: 12px; box-sizing: border-box; }
+            .kartica-upit {
+                display: inline-block;
+                padding: 12px 20px 0;
+                font-size: 13px;
+                color: #C8A97E;
+                text-decoration: none;
+                font-weight: 400;
+                letter-spacing: 0.04em;
+                transition: opacity 0.2s ease;
+            }
+            .kartica-upit:hover { opacity: 0.7; }
+
+            /* HERO */
+            main {
+                justify-content: flex-end;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .hero-subtitle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                animation: fadeUp 1.2s ease 0.4s forwards;
+                font-size: 18px;
+                font-style: italic;
+                font-family: 'Cormorant Garamond', serif;
+                font-weight: 300;
+                color: rgba(245,242,237,0.92);
+                letter-spacing: 0.08em;
+                white-space: nowrap;
+                z-index: 2;
+                text-align: center;
+            }
+
+            @keyframes fadeUp {
+                from { opacity: 0; transform: translate(-50%, calc(-50% + 16px)); }
+                to { opacity: 1; transform: translate(-50%, -50%); }
+            }
+
+            /* NAŠA PONUDA */
+            .proizvodi-header {
+                text-align: center;
+                margin-bottom: 48px;
+            }
+            .proizvodi-header .section-label {
+                display: block;
+                margin-bottom: 8px;
+            }
+            .proizvodi-header h2 {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 42px;
+                font-weight: 300;
+                color: #3A2E28;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="promo-traka">
+          ✨ Novo: <a href="svjetleci.html">Svjetleći buket</a> — između cvjetova, lampice. U mraku, savršeno.
+        </div>
+
+        <nav>
+            <a href="index.html">
+            <img class="logo" src="logo.png" alt="Lucha Candle Shop">
+            </a>            
+            <ul>
+                <li><a href="buketi.html">Buketi</a></li>
+                <li><a href="svijece.html">Svijeće</a></li>
+                <li><a href="konfigurator.html">Personalizacija</a></li>
+                <li><a href="pokloni.html">Pokloni</a></li>
+                <li><a href="sezonska.html">Sezonska kolekcija</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="kontakt.html">Naruči</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Svjetlost koja ostaje.</h1>
+            <p class="hero-subtitle"><em>Ručno rađeno. S ljubavlju, iz Crne Gore.</em></p>
+            <button onclick="document.getElementById('kolekcija').scrollIntoView({behavior: 'smooth'})">Pogledaj kolekciju</button>
+        </main>
+
+        <section class="proizvodi" id="kolekcija">
+            <div class="proizvodi-header">
+                <span class="section-label">Kolekcija</span>
+                <h2>Naša ponuda</h2>
+            </div>
+            <div class="grid">
+
+                <div class="kartica" onclick="window.location='buketi.html'">
+                    <img src="slike/buketi/bidermajer.jpg" alt="Buket od voska">
+                    <h3>Buketi</h3>
+                    <p>Ručno rađeni buketi od prirodnog voska — savršen poklon za svaku priliku.</p>
+                    <a class="kartica-upit" href="buketi.html">Pogledaj kolekciju →</a>
+                </div>
+
+                <div class="kartica" onclick="window.location='svijece.html'">
+                    <img src="slike/pojedinacne/beba.jpg" alt="Pojedinačne svijeće">
+                    <h3>Svijeće</h3>
+                    <p>Ručno rađene figure i oblici od prirodnog voska — dekoracija s dušom.</p>
+                    <a class="kartica-upit" href="svijece.html">Pogledaj kolekciju →</a>
+                </div>
+
+                <div class="kartica" onclick="window.location='pokloni.html'">
+                    <img src="slike/poklon/srce_kutija_buket.jpg" alt="Poklon setovi">
+                    <h3>Pokloni & setovi</h3>
+                    <p>Posebno složeni setovi za posebne trenutke — rođendani, godišnjice i sve prilike.</p>
+                    <a class="kartica-upit" href="pokloni.html">Pogledaj kolekciju →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="recenzije">
+            <p class="section-label" style="text-align:center;">Šta kažu kupci</p>
+            <h2 style="text-align:center;">Njihove <em>riječi</em></h2>
+            <div class="recenzije-grid">
+
+                <div class="recenzija">
+                    <p class="recenzija-tekst">"Dobila sam buket kao poklon i nisam mogla da vjerujem koliko je lijep. Svaka svijeća je savršeno oblikovana, kao da je iz neke fancy prodavnice u Parizu."</p>
+                    <p class="recenzija-autor">— Ana, Nikšić</p>
+                </div>
+
+                <div class="recenzija">
+                    <p class="recenzija-tekst">"Naručila sam za mamin i sestrin rođendan. Svaki put presrećna — lijepo upakovano, miriše predivno, stiže na vrijeme."</p>
+                    <p class="recenzija-autor">— Maja, Nikšić</p>
+                </div>
+
+                <div class="recenzija">
+                    <p class="recenzija-tekst">"Konačno nešto domaće i kvalitetno. Osjeti se da je rađeno s ljubavlju — i to se vidi i miriše."</p>
+                    <p class="recenzija-autor">— Jovana, Bar</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="o-nama" id="o-nama">
+            <div class="o-nama-tekst">
+                <p class="section-label">O nama</p>
+                <h2>Nije bilo plana.<br><em>Bila je samo želja.</em></h2>
+                <p class="o-nama-opis">Bila je samo jedna želja — da nešto napravimo, da ostavimo dio sebe u nečemu što traje. Iz te želje rodila se Luča.</p>
+                <p class="o-nama-opis">Luča je svjetlost koja ne viče. Tiha, topla, postojana. Ona koja ostaje i kad se ostalo ugasi. Za nas je to i više od toga — Luča je naša, crnogorska, duboko ukorijenjena u tradiciji žena koje su gradile ljepotu strpljivim rukama i tihim srcima.</p>
+                <p class="o-nama-opis">Napravljena je od sestrinske ljubavi. I svaki put kad zapalite jednu od naših svijeća, ili primite naš buket u ruke — ta ljubav prelazi na vas.</p>
+                <p class="o-nama-opis"><em>Jer svjetlost koja ostaje — uvijek pronađe put.</em></p>
+            </div>
+            <div class="o-nama-logo">
+                <img src="logo.png" alt="Lucha Candle Shop">
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-logo">Lucha Candle Shop</div>
+            <p class="footer-copy">© 2026 Lucha · Nikšić</p>
+            <div style="display:flex; gap:24px;">
+                <a class="footer-ig" href="dostava.html">Dostava i povrat</a>
+                <a class="footer-ig" href="https://instagram.com/luchaa.me" target="_blank">@luchaa.me</a>
+            </div>
+        </footer>
+
+        <a class="whatsapp-btn" href="https://wa.me/38267593398" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.135 1.527 5.882L0 24l6.272-1.506A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.876 9.876 0 01-5.031-1.378l-.36-.214-3.733.897.933-3.622-.235-.373A9.861 9.861 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106c5.421 0 9.894 4.474 9.894 9.894 0 5.421-4.473 9.894-9.894 9.894z"/>
+            </svg>
+        </a>
+    </body>
+</html>

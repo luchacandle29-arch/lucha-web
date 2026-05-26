@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proizvod — Lucha Candle Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="promo-traka">
+  ✨ Novo: <a href="svjetleci.html">Svjetleći buket</a> — između cvjetova, lampice. U mraku, savršeno.
+</div>
+
+  <nav>
+    <a href="index.html"><img class="logo" src="logo.png" alt="Lucha Candle Shop Candle Shop"></a>
+    <ul>
+      <li><a href="buketi.html">Buketi</a></li>
+      <li><a href="svijece.html">Svijeće</a></li>
+      <li><a href="konfigurator.html">Personalizacija</a></li>
+      <li><a href="pokloni.html">Pokloni</a></li>
+      <li><a href="sezonska.html">Sezonska kolekcija</a></li>
+      <li><a href="o-nama.html">O nama</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="kontakt.html">Naruči</a></li>
+    </ul>
+  </nav>
+
+  <section class="proizvod-detalj">
+    <div class="proizvod-slika">
+      <img id="p-slika" src="" alt="">
+    </div>
+    <div class="proizvod-info">
+      <p class="section-label" id="p-kategorija"></p>
+      <h2 id="p-naziv"></h2>
+      <p class="proizvod-opis" id="p-opis"></p>
+
+      <div class="proizvod-detalji">
+        <div class="detalj">
+          <span class="detalj-label">Materijal</span>
+          <span class="detalj-vrijednost">Prirodni vosak</span>
+        </div>
+        <div class="detalj">
+          <span class="detalj-label">Pakovanje</span>
+          <span class="detalj-vrijednost">Poklon kutija</span>
+        </div>
+        <div class="detalj">
+          <span class="detalj-label">Izrada</span>
+          <span class="detalj-vrijednost">Ručno rađeno</span>
+        </div>
+        <div class="detalj">
+          <span class="detalj-label">Rok isporuke</span>
+          <span class="detalj-vrijednost">3–5 dana</span>
+        </div>
+      </div>
+
+      <a id="p-wa" href="https://wa.me/38267593398" target="_blank"
+         style="display:inline-block; text-decoration:none; margin-top:32px; padding:14px 32px; background-color:#3A2E28; color:#F5F2ED; font-size:13px; letter-spacing:0.08em; font-family:'DM Sans',sans-serif;">
+        Pitaj za cijenu
+      </a>
+
+      <div class="upozorenje" style="margin-top:24px;">
+        ⚠️ Važna napomena: Buketi od voštanih svijeća nijesu namijenjeni za paljenje u cijelosti. Svaka svijeća se vadi iz buketa i pali pojedinačno. Čuvajte ih na hladnom i suhom mjestu, van domašaja djece.
+      </div>
+      <p class="proizvod-napomena">Svaka narudžba se priprema ručno. Rok isporuke 3–5 dana.</p>
+    </div>
+  </section>
+
+  <a class="whatsapp-btn" href="https://wa.me/38267593398" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.135 1.527 5.882L0 24l6.272-1.506A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.876 9.876 0 01-5.031-1.378l-.36-.214-3.733.897.933-3.622-.235-.373A9.861 9.861 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106c5.421 0 9.894 4.474 9.894 9.894 0 5.421-4.473 9.894-9.894 9.894z"/>
+    </svg>
+  </a>
+
+  <footer>
+    <div class="footer-logo">Lucha Candle Shop</div>
+    <p class="footer-copy">© 2026 Lucha Candle Shop · Nikšić</p>
+    <div style="display:flex; gap:24px;">
+      <a class="footer-ig" href="dostava.html">Dostava i povrat</a>
+      <a class="footer-ig" href="https://instagram.com/luchaa.me" target="_blank">@luchaa.me</a>
+    </div>
+  </footer>
+
+  <script>
+    const proizvodi = {
+      // BUKETI
+      'zeleno-bez-buket': {
+        naziv: 'Zeleno-bež buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/zeleno_bez_buket.jpg',
+        opis: 'Zemaljski tonovi za mirnu eleganciju. Kombinacija zelene i bež boje daje ovom buketu prirodan, opušten karakter — savršen za dom ili kao poklon osobi koja voli suptilnu ljepotu.'
+      },
+      'rozo-bijeli-buket': {
+        naziv: 'Rozo-bijeli buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/rozo_bijeli_buket.jpg',
+        opis: 'Nježna proljećna paleta u rozo i bijeloj nijansi. Romantičan — idealan poklon za rođendan, godišnjicu ili jednostavno kao znak pažnje.'
+      },
+      'bidermajer': {
+        naziv: 'Bidermajer buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/bidermajer.jpg',
+        opis: 'Klasičan okrugli buket, gusto složen s ljubavlju. Bidermajer forma je vječna — elegantna, simetrična i uvijek na mjestu, bez obzira na priliku.'
+      },
+      'pcelica-buket': {
+        naziv: 'Pčelica buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/pcelica_buket.jpg',
+        opis: 'Sladak i šarmantan — kao med u cvijetu. Ovaj buket nosi radost i toplinu, savršen poklon za nekog ko zasluži malo slatkoće u svom danu.'
+      },
+      'biciklo-buket': {
+        naziv: 'Buket u biciklu',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/biciklo_buket.jpg',
+        opis: 'Jedinstven i dekorativan — savršen za posebne prilike. Buket složen u minijaturni bicikl stvara nezaboravan vizuelni efekat i ostaje kao trajna dekoracija.'
+      },
+      'rozo-plavi-buket': {
+        naziv: 'Rozo-plavi buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/rozo_plavi_buket.jpg',
+        opis: 'Neuobičajena i upečatljiva kombinacija boja. Za one koji vole da se istaknu — smjela paleta koja ostavlja snažan utisak.'
+      },
+      'ljubicasti-buket': {
+        naziv: 'Ljubičasti buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/ljubicasti_buket.jpg',
+        opis: 'Nježan i romantičan, u mekim ljubičastim tonovima. Ljubičasta je boja mašte i elegancije — ovaj buket nosi oba.'
+      },
+      'ljubicasti-buket-medo': {
+        naziv: 'Ljubičasti buket s medvjedićem',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/ljubicasti_buket_medo.jpg',
+        opis: 'Romantičan poklon s medo iznenađenjem unutra. Buket koji krije slatko iznenađenje — za nekoga posebnog kome želiš izmamiti osmijeh.'
+      },
+      'ljub-zeleni-buket': {
+        naziv: 'Ljubičasto-zeleni buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/ljub_zeleni_buket.jpg',
+        opis: 'Smjela kombinacija boja za smjele karaktere. Ljubičasta i zelena zajedno stvaraju neočekivanu harmoniju koja se ne zaboravlja.'
+      },
+      'bez-buket': {
+        naziv: 'Bež buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/bez_buket.jpg',
+        opis: 'Elegantno i nježno, u toplim bež tonovima. Minimalistički i sofisticiran — buket koji pristaje uz svaki enterijer i svaku priliku.'
+      },
+      'bez-buket-medo': {
+        naziv: 'Bež buket s medvjedićem',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/bez_buket_medo.jpg',
+        opis: 'Sladak poklon iznenađenja — buket i medo u jednom. Nježna bež paleta s medom koji se krije unutra — savršeno za baby shower ili poklon djetetu.'
+      },
+      'rozi-buket-medo': {
+        naziv: 'Rozi buket s medvjedićem',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/rozi_buket_medo.jpg',
+        opis: 'Pastelno rozo i medo — neodoljiva kombinacija. Buket koji nosi dvostruku radost — ljepotu cvjetova i slatkoću iznenađenja.'
+      },
+      'pismo-buket': {
+        naziv: 'Pismo buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/pismo_buket.jpg',
+        opis: 'Buket uz koji šalješ poruku srcem. Idealan kada riječi nijesu dovoljne — neka buket kaže sve što osjećaš.'
+      },
+      'zeleni-buket': {
+        naziv: 'Zeleni buket',
+        kategorija: 'Buketi',
+        slika: 'slike/buketi/zelenibuket.jpg',
+        opis: 'Svjež i prirodan — kao proljeće u tvojim rukama. Zelena boja nosi energiju obnove i nade, a ovaj buket donosi taj osjećaj u svaki prostor.'
+      },
+
+      // POKLONI
+      'korpica-mama': {
+        naziv: 'Korpica za mamu',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/korpica_mama.jpg',
+        opis: 'Nježan poklon za najvažniju osobu — idealno za Majčin dan. Pažljivo složena korpica s voštanim cvjetovima koji ne venu nikad.'
+      },
+      'love-u-buket': {
+        naziv: 'Love buket',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/love_u_buket.jpg',
+        opis: 'Poruka ljubavi složena u cvijetu — savršen poklon za godišnjicu. Svaki detalj je osmišljen da kaže ono najvažnije.'
+      },
+      'master-buket': {
+        naziv: 'Master buket',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/master_buket.jpg',
+        opis: 'Raskošan i impresivan — za one trenutke koji zaslužuju sve. Kada samo najljepše može da izrazi koliko ti je neko važan.'
+      },
+      'buket-bravo-mama': {
+        naziv: 'Bravo mama',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/buket_bravo_mama.jpg',
+        opis: 'Poseban buket za posebnu mamu — za svaki povod koji zaslužuje zahvalnost. Jer mame zaslužuju biti slavljene svaki dan.'
+      },
+      'crveno-srce-buket': {
+        naziv: 'Crveno srce',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/crveno_srce_buket.jpg',
+        opis: 'Klasičan simbol ljubavi u ručnoj izradi — za Valentinovo i godišnjice. Crvena boja strasti, oblikovana s pažnjom i ljubavlju.'
+      },
+      'par-buket': {
+        naziv: 'Par buket',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/par_buket.jpg',
+        opis: 'Dva buketa u paru — idealan poklon za dvoje. Savršen za vjenčanja, godišnjice ili kad želiš da pokloniš nešto posebno paru.'
+      },
+      'rodjenje-buket': {
+        naziv: 'Dobrodošlo na svijet',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/rodjenje_buket.jpg',
+        opis: 'Nježan poklon za najradosniju vijest — dolazak bebe. Pastelne boje i meki oblici čine ovaj buket savršenim za tu posebnu radost.'
+      },
+      'rozi-rodjendan-buket': {
+        naziv: 'Rozi rođendanski buket',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/rozi_rodjendan_buket.jpg',
+        opis: 'Živahna rozo paleta za nezaboravan rođendan. Buket koji nosi energiju slavlja i toplinu pažnje.'
+      },
+      'rozi-rodjendanski-buket': {
+        naziv: 'Rozi rodjendanski buket II',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/rozi_rodjendanski_buket.jpg',
+        opis: 'Varijanta u punom rozo sjaju — svaki buket je jedinstven. Drugačiji raspored, ista ljubav uložena u svaki detalj.'
+      },
+      'spomenar-buket': {
+        naziv: 'Spomenar',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/spomenar_buket.jpg',
+        opis: 'Poklon koji ostaje — kao uspomena na poseban trenutak. Voštani cvjetovi ne venu, pa ova uspomena traje zauvijek.'
+      },
+      'srce-kutija-buket': {
+        naziv: 'Srce kutija',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/srce_kutija_buket.jpg',
+        opis: 'Buket složen u obliku srca u elegantnoj kutiji. Romantičan i jedinstven — poklon koji govori više od hiljadu riječi.'
+      },
+      'vjeridba-buket': {
+        naziv: 'Vjeridbeni buket',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/vjeridba_buket.jpg',
+        opis: 'Za najvažniji trenutak — raskošan i nezaboravan. Buket dostojan najveće ljubavne priče.'
+      },
+      'vjeridba-butetkafeni': {
+        naziv: 'Vjeridbeni buket — kafeni',
+        kategorija: 'Pokloni & setovi',
+        slika: 'slike/poklon/vjeridba_butetkafeni.jpg',
+        opis: 'Topli, zemaljski tonovi za elegantnu vjeridbenu ceremoniju. Sofisticiran i vremenski postojan — kao i ljubav koju simbolizuje.'
+      },
+
+      // SVIJEĆE
+      'srce': {
+        naziv: 'Srce',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/srce.jpg',
+        opis: 'Simbol ljubavi u prirodnom vosku — savršen romantičan poklon. Može se paliti ili koristiti kao trajna dekoracija.'
+      },
+      'srce-na-nivoe': {
+        naziv: 'Srce na nivoe',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/srce_na_nivoe.jpg',
+        opis: 'Višeslojna srce svijeća — raskošniji poklon za posebne prilike. Svaki sloj otkriva novu ljepotu dok se svijeća topi.'
+      },
+      'srce-prsten': {
+        naziv: 'Srce s prstenom',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/srce_prsten.jpg',
+        opis: 'Nježan detalj za vjeridbe i romantične trenutke. Savršen poklon uz prsten ili kao dekoracija za večeru.'
+      },
+      'srce-sa-rukama': {
+        naziv: 'Srce sa rukama',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/srce_sa_rukama.jpg',
+        opis: 'Kao zagrljaj koji ostaje. Figura koja prenosi toplinu i brigu bez ikakvih riječi.'
+      },
+      'par': {
+        naziv: 'Par',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/par.jpg',
+        opis: 'Dvije figure u zagrljaju — idealan poklon za parove i vjenčanja. Romantična dekoracija koja ostaje kao uspomena na poseban dan.'
+      },
+      'mladenci': {
+        naziv: 'Mladenci',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/mladenci.jpg',
+        opis: 'Vjenčani par u vosku — nezaboravan svadbeni poklon ili dekoracija. Svaki par je ručno oblikovan i jedinstven.'
+      },
+      'mama': {
+        naziv: 'Mama',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/MAMA.jpg',
+        opis: 'Za najvažniju osobu — sa ljubavlju ispisano u vosku. Poklon koji govori sve što ponekad teško izgovorimo.'
+      },
+      'mama-i-beba': {
+        naziv: 'Mama i beba',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/mama_i_beba.jpg',
+        opis: 'Nježna figura za baby shower ili poklon novoj mamici. Trenutak koji se pamti, zauvijek očuvan u vosku.'
+      },
+      'beba': {
+        naziv: 'Beba',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/beba.jpg',
+        opis: 'Slatka beba figura — savršen poklon za dolazak novog člana porodice. Nježno oblikovana, idealna za baby shower.'
+      },
+      'medo': {
+        naziv: 'Medo',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/medo.jpg',
+        opis: 'Sladak medvjedić od voska — omiljeni poklon za djecu i odrasle. Dekorativan i šarmantan, uvijek izmamljuje osmijeh.'
+      },
+      'djevojka': {
+        naziv: 'Djevojka',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/djevojka.jpg',
+        opis: 'Elegantna figura u vosku — personalizovano i posebno. Savršen poklon za posebnu djevojku u tvom životu.'
+      },
+      'astronaut': {
+        naziv: 'Astronaut',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/astronaut.jpg',
+        opis: 'Za one koji sanjaju bez granica — neobičan i upečatljiv poklon. Idealno za one koji gledaju prema zvijezdama.'
+      },
+      'torta': {
+        naziv: 'Torta',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/torta.jpg',
+        opis: 'Lažna torta od voska — dekorativni komad koji se ne jede, ali se pamti. Savršena za ukrašavanje i fotografisanje.'
+      },
+      'jagode': {
+        naziv: 'Jagode',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/jagode.jpg',
+        opis: 'Realistične jagode od voska — dekorativno i neodoljivo slatko. Izgledaju kao prave, a traju vječno.'
+      },
+      'pojedinacni-cvjetovi': {
+        naziv: 'Pojedinačni cvjetovi',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/pojedinacni_cvjetovi.jpg',
+        opis: 'Ručno oblikovani cvijetovi — savršeni kao samostalna dekoracija ili dio buketa. Svaki cvijet je jedinstven.'
+      },
+      'kugle': {
+        naziv: 'Kugle',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/kugle.jpg',
+        opis: 'Jednostavne i elegantne — savršena dekoracija za svaki prostor. Minimalistička forma koja donosi toplinu i mir.'
+      },
+      'kuglica': {
+        naziv: 'Kuglica',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/kuglica.jpg',
+        opis: 'Mala savršena kugla — idealna kao poklon ili detalj u uređenju doma. Može se koristiti i kao ukrašena božićna kuglica.'
+      },
+      'svijeca-duguljasta': {
+        naziv: 'Duguljasta svijeća',
+        kategorija: 'Svijeće',
+        slika: 'slike/pojedinacne/svijeća_duguljasta.jpg',
+        opis: 'Klasična forma, prirodni vosak — topla svjetlost za svaki dom. Gori dugo i ravnomjerno, ispunjava prostor nježnim mirisom.'
+      },
+
+      // VASKRS
+      'bez-buket-vaskrs': {
+        naziv: 'Bež vaskršnji buket',
+        kategorija: 'Vaskrs',
+        slika: 'slike/vaskrs/bez_buket_vaskrs.jpg',
+        opis: 'Nježni zemaljski tonovi za topli vaskršnji ugođaj. Elegantna varijanta vaskršnjeg buketa u bež paleti.'
+      },
+      'crveni-buket-vaskrs': {
+        naziv: 'Crveni vaskršnji buket',
+        kategorija: 'Vaskrs',
+        slika: 'slike/vaskrs/crveni_buket_vaskrs.jpg',
+        opis: 'Živahan i pun energije — idealan poklon za vaskršnje jutro. Crvena boja radosti i proslave.'
+      },
+      'ljubicasti-buket-vaskrs': {
+        naziv: 'Ljubičasti vaskršnji buket',
+        kategorija: 'Vaskrs',
+        slika: 'slike/vaskrs/ljubicasti_buket_vaskrs.jpg',
+        opis: 'Pastelna ljubičasta — boja proljeća i vaskršnje radosti. Nježan i romantičan, savršen poklon za praznike.'
+      },
+      'pismo-buket-vaskrs': {
+        naziv: 'Vaskršnji pismo buket',
+        kategorija: 'Vaskrs',
+        slika: 'slike/vaskrs/pismo_buket_vaskrs.jpg',
+        opis: 'Buket s posebnom porukom — pošalji nešto više od čestitke. Vaskrs je prilika da kažeš nekome koliko ti je važan.'
+      },
+      'pojedinacne-vaskrs': {
+        naziv: 'Vaskršnje zečice',
+        kategorija: 'Vaskrs',
+        slika: 'slike/vaskrs/pojedinacne_vaskrs.jpg',
+        opis: 'Slatke voštane zečice — dekoracija koja čini praznik posebnim. Ručno oblikovane, savršene za vaskršnji sto.'
+      },
+      'pojedinacne-vaskrs1': {
+        naziv: 'Vaskršnje zečice II',
+        kategorija: 'Vaskrs',
+        slika: 'slike/vaskrs/pojedinacne_vaskrs1.jpg',
+        opis: 'Varijanta u pastelnoj paleti — savršena kao poklon ili dekoracija stola. Svaka zečica je jedinstven mali umjetnički komad.'
+      },
+      'rozi-buket-vaskrs': {
+        naziv: 'Rozi vaskršnji buket',
+        kategorija: 'Vaskrs',
+        slika: 'slike/vaskrs/rozi_buket_vaskrs.jpg',
+        opis: 'Rozo i bijelo u proljećnom spletu — nježan poklon za praznike. Pastelna paleta koja donosi proljeće u svaki dom.'
+      },
+
+      // BOŽIĆ
+      'jelka': {
+        naziv: 'voštana jelka',
+        kategorija: 'Božić & Nova godina',
+        slika: 'slike/nova_godina/jelka.jpg',
+        opis: 'Minijaturna jelka od prirodnog voska — zimska dekoracija koja miriše na praznike. Savršena kao poklon ili dekoracija blagdanskog stola.'
+      },
+      'jelka2': {
+        naziv: 'voštana jelka II',
+        kategorija: 'Božić & Nova godina',
+        slika: 'slike/nova_godina/jelka2.jpg',
+        opis: 'Elegantna bijela varijanta — savršena dekoracija za blagdanski stol ili poklon. Bijela jelka nosi čaroliju zimskih praznika.'
+      }
+    };
+
+    // Učitaj proizvod iz URL parametra
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const p = proizvodi[id];
+
+    if (p) {
+      document.title = p.naziv + ' — Lucha Candle Shop';
+      document.getElementById('p-slika').src = p.slika;
+      document.getElementById('p-slika').alt = p.naziv;
+      document.getElementById('p-kategorija').textContent = p.kategorija;
+      document.getElementById('p-naziv').textContent = p.naziv;
+      document.getElementById('p-opis').textContent = p.opis;
+      const waMsg = encodeURIComponent('Zdravo! Zanima me ' + p.naziv + '. Možete li mi reći cijenu i dostupnost?');
+      document.getElementById('p-wa').href = 'https://wa.me/38267593398?text=' + waMsg;
+      document.getElementById('p-wa').textContent = 'Pitaj za cijenu';
+    } else {
+      document.querySelector('.proizvod-info').innerHTML = '<p>Proizvod nije pronađen. <a href="index.html">Vrati se na početnu</a>.</p>';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sastavi svoj buket — Lucha Candle Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+<div class="promo-traka">
+  ✨ Novo: <a href="svjetleci.html">Svjetleći buket</a> — između cvjetova, lampice. U mraku, savršeno.
+</div>
+
+  <nav>
+    <a href="index.html"><img class="logo" src="logo.png" alt="Lucha Candle Shop Candle Shop"></a>
+    <ul>
+      <li><a href="buketi.html">Buketi</a></li>
+      <li><a href="svijece.html">Svijeće</a></li>
+      <li><a href="konfigurator.html">Personalizacija</a></li>
+      <li><a href="pokloni.html">Pokloni</a></li>
+      <li><a href="sezonska.html">Sezonska kolekcija</a></li>
+      <li><a href="o-nama.html">O nama</a></li>
+      <li><a href="kontakt.html">Naruči</a></li>
+    </ul>
+  </nav>
+
+  <section style="max-width: 720px; margin: 0 auto; padding: 60px 48px 100px;">
+    <p class="section-label">Personalizacija</p>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:#1A1814;margin-bottom:8px;">Sastavi svoj buket</h1>
+    <p style="font-size:15px;color:#8A8070;font-weight:300;margin-bottom:40px;">Izaberi cvijeće, boje i detalje — mi ćemo ga složiti za tebe.</p>
+
+    <p class="konfig-step">1. Izaberi cvijeće</p>
+    <div class="flowers-grid">
+      <div class="flower-card" data-flower="ruza" onclick="toggleFlower(this)">
+        <div class="flower-icon">🌹</div>
+        <div class="flower-name">Ruža</div>
+        <div class="flower-count">
+          <button class="count-btn" onclick="changeCount(event,'ruza',-1)">−</button>
+          <span class="count-num" id="cnt-ruza">0</span>
+          <button class="count-btn" onclick="changeCount(event,'ruza',1)">+</button>
+        </div>
+      </div>
+      <div class="flower-card" data-flower="dalija" onclick="toggleFlower(this)">
+        <div class="flower-icon">🌸</div>
+        <div class="flower-name">Dalija</div>
+        <div class="flower-count">
+          <button class="count-btn" onclick="changeCount(event,'dalija',-1)">−</button>
+          <span class="count-num" id="cnt-dalija">0</span>
+          <button class="count-btn" onclick="changeCount(event,'dalija',1)">+</button>
+        </div>
+      </div>
+      <div class="flower-card" data-flower="gerber" onclick="toggleFlower(this)">
+        <div class="flower-icon">🌼</div>
+        <div class="flower-name">Gerber</div>
+        <div class="flower-count">
+          <button class="count-btn" onclick="changeCount(event,'gerber',-1)">−</button>
+          <span class="count-num" id="cnt-gerber">0</span>
+          <button class="count-btn" onclick="changeCount(event,'gerber',1)">+</button>
+        </div>
+      </div>
+      <div class="flower-card" data-flower="sakura" onclick="toggleFlower(this)">
+        <div class="flower-icon">🌺</div>
+        <div class="flower-name">Sakura</div>
+        <div class="flower-count">
+          <button class="count-btn" onclick="changeCount(event,'sakura',-1)">−</button>
+          <span class="count-num" id="cnt-sakura">0</span>
+          <button class="count-btn" onclick="changeCount(event,'sakura',1)">+</button>
+        </div>
+      </div>
+      <div class="flower-card" data-flower="suncokret" onclick="toggleFlower(this)">
+        <div class="flower-icon">🌻</div>
+        <div class="flower-name">Suncokret</div>
+        <div class="flower-count">
+          <button class="count-btn" onclick="changeCount(event,'suncokret',-1)">−</button>
+          <span class="count-num" id="cnt-suncokret">0</span>
+          <button class="count-btn" onclick="changeCount(event,'suncokret',1)">+</button>
+        </div>
+      </div>
+      <div class="flower-card" data-flower="orhideja" onclick="toggleFlower(this)">
+        <div class="flower-icon">🪷</div>
+        <div class="flower-name">Orhideja</div>
+        <div class="flower-count">
+          <button class="count-btn" onclick="changeCount(event,'orhideja',-1)">−</button>
+          <span class="count-num" id="cnt-orhideja">0</span>
+          <button class="count-btn" onclick="changeCount(event,'orhideja',1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <hr class="konfig-divider">
+    <p class="konfig-step">2. Izaberi boje</p>
+    <div class="colours-grid">
+      <div class="colour-dot" style="background:#FFFFFF;border:1px solid #ddd" data-colour="bijela" title="Bijela" onclick="toggleColour(this)"></div>
+      <div class="colour-dot" style="background:#F4C0D1" data-colour="roza" title="Roza" onclick="toggleColour(this)"></div>
+      <div class="colour-dot" style="background:#D4537E" data-colour="tamno roza" title="Tamno roza" onclick="toggleColour(this)"></div>
+      <div class="colour-dot" style="background:#C8A9D4" data-colour="ljubičasta" title="Ljubičasta" onclick="toggleColour(this)"></div>
+      <div class="colour-dot" style="background:#E8DDD0" data-colour="nude" title="Nude" onclick="toggleColour(this)"></div>
+      <div class="colour-dot" style="background:#C8A97E" data-colour="zlatna" title="Zlatna" onclick="toggleColour(this)"></div>
+      <div class="colour-dot" style="background:#D85A30" data-colour="crvena" title="Crvena" onclick="toggleColour(this)"></div>
+      <div class="colour-dot" style="background:#9FE1CB" data-colour="mint" title="Mint" onclick="toggleColour(this)"></div>
+      <div class="colour-dot" style="background:#B5D4F4" data-colour="plava" title="Plava" onclick="toggleColour(this)"></div>
+    </div>
+
+    <hr class="konfig-divider">
+    <p class="konfig-step">3. Veličina buketa</p>
+    <div class="size-grid">
+      <div class="size-btn" data-size="Mali" onclick="selectSize(this)">
+        <div class="size-name">Mali</div>
+        <div class="size-desc">5–7 cvijetova</div>
+      </div>
+      <div class="size-btn" data-size="Srednji" onclick="selectSize(this)">
+        <div class="size-name">Srednji</div>
+        <div class="size-desc">10–12 cvijetova</div>
+      </div>
+      <div class="size-btn" data-size="Veliki" onclick="selectSize(this)">
+        <div class="size-name">Veliki</div>
+        <div class="size-desc">15+ cvijetova</div>
+      </div>
+    </div>
+
+    <hr class="konfig-divider">
+    <p class="konfig-step">4. Dodaci</p>
+    <div class="extras-grid">
+      <div class="extra-btn" data-extra="Til" onclick="toggleExtra(this)">Til</div>
+      <div class="extra-btn" data-extra="Čipka" onclick="toggleExtra(this)">Čipka</div>
+      <div class="extra-btn" data-extra="Mašna" onclick="toggleExtra(this)">Mašna</div>
+      <div class="extra-btn" data-extra="Poklon kartica" onclick="toggleExtra(this)">Poklon kartica</div>
+      <div class="extra-btn" data-extra="Papir" onclick="toggleExtra(this)">Papir</div>
+      <div class="extra-btn" data-extra="Kutija" onclick="toggleExtra(this)">Kutija</div>
+    </div>
+
+    <hr class="konfig-divider">
+    <div class="konfig-summary" id="summary">
+      <p style="font-size:14px;font-weight:400;color:#1A1814;margin-bottom:10px;">Tvoj buket</p>
+      <p class="summary-row" id="s-cvijece">Cvijeće: <span>—</span></p>
+      <p class="summary-row" id="s-boje">Boje: <span>—</span></p>
+      <p class="summary-row" id="s-velicina">Veličina: <span>—</span></p>
+      <p class="summary-row" id="s-dodaci">Dodaci: <span>—</span></p>
+    </div>
+
+    <button class="btn-primary konfig-send" id="send-btn" onclick="posaljiNarudžbu()" disabled>
+      Pošalji narudžbu putem WhatsApp
+    </button>
+    <p style="font-size:12px;color:#8A8070;margin-top:12px;font-weight:300;font-style:italic;">Odgovaramo u roku od nekoliko sati.</p>
+  </section>
+
+  <a class="whatsapp-btn" href="https://wa.me/38267593398" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.135 1.527 5.882L0 24l6.272-1.506A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.876 9.876 0 01-5.031-1.378l-.36-.214-3.733.897.933-3.622-.235-.373A9.861 9.861 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106c5.421 0 9.894 4.474 9.894 9.894 0 5.421-4.473 9.894-9.894 9.894z"/>
+    </svg>
+  </a>
+
+  <footer>
+    <div class="footer-logo">Lucha Candle Shop</div>
+    <p class="footer-copy">© 2026 Lucha Candle Shop · Nikšić</p>
+    <div style="display:flex;gap:24px;">
+      <a class="footer-ig" href="dostava.html">Dostava & povrat</a>
+      <a class="footer-ig" href="https://instagram.com/luchaa.me" target="_blank">@luchaa.me</a>
+    </div>
+  </footer>
+
+  <script>
+    const counts = {ruza:0,dalija:0,gerber:0,sakura:0,suncokret:0,orhideja:0};
+    const names = {ruza:'Ruža',dalija:'Dalija',gerber:'Gerber',sakura:'Sakura',suncokret:'Suncokret',orhideja:'Orhideja'};
+    let selectedColours = [];
+    let selectedSize = '';
+    let selectedExtras = [];
+
+    function toggleFlower(el){
+      el.classList.toggle('selected');
+      updateSummary();
+    }
+
+    function changeCount(e,flower,delta){
+      e.stopPropagation();
+      counts[flower] = Math.max(0,counts[flower]+delta);
+      document.getElementById('cnt-'+flower).textContent = counts[flower];
+      const card = document.querySelector('[data-flower="'+flower+'"]');
+      if(counts[flower]>0) card.classList.add('selected');
+      else card.classList.remove('selected');
+      updateSummary();
+    }
+
+    function toggleColour(el){
+      el.classList.toggle('selected');
+      const c = el.dataset.colour;
+      if(selectedColours.includes(c)) selectedColours = selectedColours.filter(x=>x!==c);
+      else selectedColours.push(c);
+      updateSummary();
+    }
+
+    function selectSize(el){
+      document.querySelectorAll('.size-btn').forEach(b=>b.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedSize = el.dataset.size;
+      updateSummary();
+    }
+
+    function toggleExtra(el){
+      el.classList.toggle('selected');
+      const x = el.dataset.extra;
+      if(selectedExtras.includes(x)) selectedExtras = selectedExtras.filter(e=>e!==x);
+      else selectedExtras.push(x);
+      updateSummary();
+    }
+
+    function updateSummary(){
+      const cvijece = Object.entries(counts).filter(([k,v])=>v>0).map(([k,v])=>names[k]+(v>1?' x'+v:'')).join(', ')||'—';
+      document.querySelector('#s-cvijece span').textContent = cvijece;
+      document.querySelector('#s-boje span').textContent = selectedColours.join(', ')||'—';
+      document.querySelector('#s-velicina span').textContent = selectedSize||'—';
+      document.querySelector('#s-dodaci span').textContent = selectedExtras.join(', ')||'—';
+      const hasFlower = Object.values(counts).some(v=>v>0);
+      document.getElementById('send-btn').disabled = !(hasFlower && selectedColours.length>0 && selectedSize);
+    }
+
+    function posaljiNarudžbu(){
+      const cvijece = Object.entries(counts).filter(([k,v])=>v>0).map(([k,v])=>names[k]+(v>1?' x'+v:'')).join(', ');
+      const msg = encodeURIComponent('Zdravo! Zanima me personalizovani buket:\nCvijeće: '+cvijece+'\nBoje: '+selectedColours.join(', ')+'\nVeličina: '+selectedSize+'\n'+(selectedExtras.length?'Dodaci: '+selectedExtras.join(', ')+'\n':'')+'\nMolim vas da me kontaktirate za više detalja. Hvala!');
+      window.open('https://wa.me/38267593398?text='+msg,'_blank');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Svjetleći buket — Lucha Candle Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+
+    /* HERO VIDEO */
+    .svjetleci-hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .svjetleci-hero video {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+
+    .svjetleci-hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+    }
+
+    .svjetleci-hero-tekst {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #F5F2ED;
+      padding: 0 24px;
+    }
+
+    .svjetleci-hero-tekst .section-label {
+      color: #C8A97E;
+      margin-bottom: 16px;
+    }
+
+    .svjetleci-hero-tekst h1 {
+      font-size: 72px;
+      font-weight: 300;
+      color: #F5F2ED;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .svjetleci-hero-tekst p {
+      font-size: 16px;
+      color: rgba(245,242,237,0.85);
+      max-width: 500px;
+      margin: 0 auto 32px;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    .btn-svjetleci {
+      display: inline-block;
+      padding: 14px 36px;
+      border: 1px solid rgba(200,169,126,0.8);
+      color: #C8A97E;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      font-family: 'DM Sans', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .btn-svjetleci:hover {
+      background-color: #C8A97E;
+      color: #1A1814;
+    }
+
+    /* OPIS SEKCIJA */
+    .svjetleci-opis {
+      background: #0f0f0f;
+      padding: 100px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .svjetleci-opis-tekst h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: #F5F2ED;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .svjetleci-opis-tekst h2 em {
+      font-style: italic;
+      color: #C8A97E;
+    }
+
+    .svjetleci-opis-tekst p {
+      font-size: 14px;
+      color: rgba(245,242,237,0.7);
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    .svjetleci-detalji {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .svjetleci-detalj {
+      padding: 16px;
+      border: 0.5px solid rgba(200,169,126,0.2);
+      border-radius: 2px;
+    }
+
+    .svjetleci-detalj .detalj-label {
+      color: #C8A97E;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .svjetleci-detalj .detalj-vrijednost {
+      color: #F5F2ED;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    .btn-wa-svjetleci {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 14px 36px;
+      background-color: #C8A97E;
+      color: #1A1814;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-wa-svjetleci:hover { opacity: 0.85; }
+
+    /* SLIKE */
+    .svjetleci-slike {
+      background: #0a0a0a;
+      padding: 0 48px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .svjetleci-slike img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* DRUGI VIDEO */
+    .svjetleci-video2 {
+      background: #0a0a0a;
+      padding: 0 48px 80px;
+    }
+
+    .svjetleci-video2 video {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* NAV TAMNI */
+    .nav-tamni {
+      background-color: #0f0f0f !important;
+      border-bottom: 0.5px solid rgba(200,169,126,0.15);
+    }
+
+    /* FOOTER TAMNI */
+    .footer-tamni {
+      background-color: #0f0f0f !important;
+      border-top: 0.5px solid rgba(200,169,126,0.15) !important;
+    }
+
+    .footer-tamni .footer-logo,
+    .footer-tamni .footer-copy,
+    .footer-tamni .footer-ig {
+      color: rgba(245,242,237,0.5) !important;
+    }
+
+    @media (max-width: 768px) {
+      .svjetleci-hero-tekst h1 { font-size: 40px; }
+      .svjetleci-opis {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 40px;
+      }
+      .svjetleci-opis-tekst h2 { font-size: 32px; }
+      .svjetleci-slike { padding: 0 20px 60px; }
+      .svjetleci-video2 { padding: 0 20px 60px; }
+      .svjetleci-detalji { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="promo-traka">
+  ✨ Novo: <a href="svjetleci.html">Svjetleći buket</a> — između cvjetova, lampice. U mraku, savršeno.
+</div>
+
+  <nav class="nav-tamni">
+    <a href="index.html"><img class="logo" src="logo.png" alt="Lucha Candle Shop Candle Shop"></a>
+    <ul>
+      <li><a href="buketi.html">Buketi</a></li>
+      <li><a href="svijece.html">Svijeće</a></li>
+      <li><a href="konfigurator.html">Personalizacija</a></li>
+      <li><a href="pokloni.html">Pokloni</a></li>
+      <li><a href="sezonska.html">Sezonska kolekcija</a></li>
+      <li><a href="o-nama.html">O nama</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="kontakt.html">Naruči</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO VIDEO -->
+  <section class="svjetleci-hero">
+    <video autoplay muted loop playsinline>
+      <source src="slike/svjetleci_buketi/spojeno.mp4" type="video/mp4">
+    </video>
+    <div class="svjetleci-hero-overlay"></div>
+    <div class="svjetleci-hero-tekst">
+      <p class="section-label">Novo u kolekciji</p>
+      <h1>Svjetleći<br>buket</h1>
+      <p>Između cvjetova — lampice. U mraku, savršeno.</p>
+      <a href="https://wa.me/38267593398?text=Zdravo!%20Zanima%20me%20svjetle%C4%87i%20buket.%20Mo%C5%BEete%20li%20mi%20re%C4%87i%20vi%C5%A1e?" class="btn-svjetleci" target="_blank">Pitaj za cijenu</a>
+    </div>
+  </section>
+
+  <!-- OPIS -->
+  <section class="svjetleci-opis">
+    <div class="svjetleci-opis-tekst">
+      <h2>Buket koji<br><em>svijetli</em></h2>
+      <p>Ručno rađeni Voštani buket s ugrađenim LED lampicama koje se probijaju između cvjetova. Danju elegantan poklon, noću — prava magija.</p>
+      <p>Savršen za posebne prilike — prosidbu, godišnjicu, rođendan ili jednostavno za nekoga kome želiš pokloniti nešto što se nikad ne zaboravlja.</p>
+      <div class="svjetleci-detalji">
+        <div class="svjetleci-detalj">
+          <span class="detalj-label">Materijal</span>
+          <span class="detalj-vrijednost">Prirodni vosak</span>
+        </div>
+        <div class="svjetleci-detalj">
+          <span class="detalj-label">Lampice</span>
+          <span class="detalj-vrijednost">LED, baterija</span>
+        </div>
+        <div class="svjetleci-detalj">
+          <span class="detalj-label">Pakovanje</span>
+          <span class="detalj-vrijednost">Poklon kutija</span>
+        </div>
+        <div class="svjetleci-detalj">
+          <span class="detalj-label">Izrada</span>
+          <span class="detalj-vrijednost">Ručno rađeno</span>
+        </div>
+      </div>
+      <a href="https://wa.me/38267593398?text=Zdravo!%20Zanima%20me%20svjetle%C4%87i%20buket.%20Mo%C5%BEete%20li%20mi%20re%C4%87i%20vi%C5%A1e?" class="btn-wa-svjetleci" target="_blank">Pitaj za cijenu →</a>
+    </div>
+    <div>
+      <img src="slike/svjetleci_buketi/svjetleci1.jpg" alt="Svjetleći buket" style="width:100%; border-radius:2px; display:block;">
+    </div>
+  </section>
+
+
+
+  <footer class="footer-tamni">
+    <div class="footer-logo">Lucha Candle Shop</div>
+    <p class="footer-copy">© 2026 Lucha Candle Shop · Nikšić</p>
+    <div style="display:flex; gap:24px;">
+      <a class="footer-ig" href="dostava.html">Dostava i povrat</a>
+      <a class="footer-ig" href="https://instagram.com/luchaa.me" target="_blank">@luchaa.me</a>
+    </div>
+  </footer>
+
+</body>
+</html>
