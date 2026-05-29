@@ -2,19 +2,51 @@
 <html lang="bs">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sastavi svoj buket — Lucha Candle Shop</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    .konfig-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 48px 100px;
+    }
+    .konfig-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: #1A1814;
+      margin-bottom: 8px;
+    }
+    .konfig-subtitle {
+      font-size: 15px;
+      color: #8A8070;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) {
+      .konfig-wrap {
+        padding: 32px 16px 60px;
+      }
+      .konfig-title {
+        font-size: 32px;
+      }
+      .konfig-subtitle {
+        font-size: 13px;
+        margin-bottom: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <div class="promo-traka">
   ✨ Novo: <a href="svjetleci.html">Svjetleći buket</a> — između cvjetova, lampice. U mraku, savršeno.
 </div>
 
   <nav>
-    <a href="index.html"><img class="logo" src="logo.png" alt="Lucha Candle Shop Candle Shop"></a>
+    <a href="index.html"><img class="logo" src="logo.png" alt="Lucha Candle Shop"></a>
     <ul>
       <li><a href="buketi.html">Buketi</a></li>
       <li><a href="svijece.html">Svijeće</a></li>
@@ -26,10 +58,10 @@
     </ul>
   </nav>
 
-  <section style="max-width: 720px; margin: 0 auto; padding: 60px 48px 100px;">
+  <section class="konfig-wrap">
     <p class="section-label">Personalizacija</p>
-    <h1 style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:#1A1814;margin-bottom:8px;">Sastavi svoj buket</h1>
-    <p style="font-size:15px;color:#8A8070;font-weight:300;margin-bottom:40px;">Izaberi cvijeće, boje i detalje — mi ćemo ga složiti za tebe.</p>
+    <h1 class="konfig-title">Sastavi svoj buket</h1>
+    <p class="konfig-subtitle">Izaberi cvijeće, boje i detalje — mi ćemo ga složiti za tebe.</p>
 
     <p class="konfig-step">1. Izaberi cvijeće</p>
     <div class="flowers-grid">
@@ -140,7 +172,7 @@
       <p class="summary-row" id="s-dodaci">Dodaci: <span>—</span></p>
     </div>
 
-    <button class="btn-primary konfig-send" id="send-btn" onclick="posaljiNarudžbu()" disabled>
+    <button class="konfig-send" id="send-btn" onclick="posaljiNarudžbu()" disabled>
       Pošalji narudžbu putem WhatsApp
     </button>
     <p style="font-size:12px;color:#8A8070;margin-top:12px;font-weight:300;font-style:italic;">Odgovaramo u roku od nekoliko sati.</p>
