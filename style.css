@@ -256,6 +256,108 @@ button:hover { opacity: 0.75; }
 
 .o-nama-logo img { width: 280px; }
 
+.featured-story{
+    max-width:760px;
+    margin:110px auto 100px;
+    padding:0 24px;
+    text-align:center;
+}
+
+.featured-line{
+    width:70px;
+    height:1px;
+    background:#C8A97E;
+    margin:0 auto 28px;
+}
+
+.featured-story .section-label{
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:#C8A97E;
+    margin-bottom:18px;
+}
+
+.featured-story h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:56px;
+    line-height:1.05;
+    font-weight:300;
+    color:#2E241F;
+    margin:0 0 24px;
+}
+
+.featured-text{
+    max-width:560px;
+    margin:0 auto;
+    font-size:16px;
+    line-height:1.9;
+    color:#7A6F67;
+    font-weight:300;
+}
+
+.featured-link{
+    display:inline-block;
+    margin-top:36px;
+    text-decoration:none;
+    color:#2E241F;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    position:relative;
+}
+
+.featured-link::after{
+    content:"";
+    display:block;
+    width:100%;
+    height:1px;
+    background:#C8A97E;
+    margin-top:8px;
+    transition:.25s;
+}
+
+.featured-link:hover{
+    opacity:.75;
+}
+
+.featured-link:hover::after{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@media (max-width:768px){
+
+    .featured-story{
+        margin:70px auto;
+    }
+
+    .featured-story h2{
+        font-size:40px;
+    }
+
+    .featured-text{
+        font-size:15px;
+    }
+
+}
+
+
+.proizvod-video{
+    max-width:700px;
+    margin:60px auto;
+}
+
+.proizvod-video video{
+    width:100%;
+    max-height:520px;
+    object-fit:cover;
+    border-radius:4px;
+    display:block;
+}
+
+
 /* FOOTER */
 footer {
   padding: 40px 48px;
@@ -620,13 +722,24 @@ footer {
 .flower-count { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; }
 
 .count-btn {
-  width: 24px; height: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
   border: 0.5px solid rgba(26,24,20,0.2);
   background: none;
-  cursor: pointer;
-  font-size: 14px;
+
+  font-size: 16px;
+  line-height: 1;
+  font-family: inherit;
   color: #1A1814;
+  cursor: pointer;
 }
 
 .count-num { font-size: 14px; font-weight: 500; min-width: 16px; }

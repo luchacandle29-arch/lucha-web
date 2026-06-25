@@ -79,7 +79,7 @@
     <body>
 
         <div class="promo-traka">
-          ✨ Novo: <a href="svjetleci.html">Svjetleći buket</a> — između cvjetova, lampice. U mraku, savršeno.
+            ✨ Novo: <a href="poruka.html">Svijeća sa skrivenom porukom</a> — zapali je i gledaj kako se poruka otkriva.
         </div>
 
         <nav>
@@ -92,6 +92,7 @@
                 <li><a href="konfigurator.html">Personalizacija</a></li>
                 <li><a href="pokloni.html">Pokloni</a></li>
                 <li><a href="sezonska.html">Sezonska kolekcija</a></li>
+                <li><a href="poruka.html">Pokloni s porukom</a></li>
                 <li><a href="o-nama.html">O nama</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="kontakt.html">Naruči</a></li>
@@ -104,6 +105,30 @@
             <button onclick="document.getElementById('kolekcija').scrollIntoView({behavior: 'smooth'})">Pogledaj kolekciju</button>
         </main>
 
+
+        <section class="featured-story">
+
+            <div class="featured-line"></div>
+
+            <p class="section-label">Nova kolekcija</p>
+
+            <h2>
+                Svijeća sa<br>
+                skrivenom porukom
+            </h2>
+
+            <p class="featured-text">
+                Poklon koji svoju poruku otkriva tek kada ga zapalite.
+                Svaki plamen donosi malo iznenađenje, a svaka riječ ostaje kao uspomena.
+            </p>
+
+            <a href="poruka.html" class="featured-link">
+                Otkrij više →
+            </a>
+
+        </section>
+
+
         <section class="proizvodi" id="kolekcija">
             <div class="proizvodi-header">
                 <span class="section-label">Kolekcija</span>
@@ -112,21 +137,21 @@
             <div class="grid">
 
                 <div class="kartica" onclick="window.location='buketi.html'">
-                    <img src="slike/buketi/bidermajer.jpg" alt="Buket od voska">
+                    <img loading="lazy" decoding="async" src="slike/buketi/bidermajer.jpg" alt="Buket od voska">
                     <h3>Buketi</h3>
                     <p>Ručno rađeni buketi od prirodnog voska — savršen poklon za svaku priliku.</p>
                     <a class="kartica-upit" href="buketi.html">Pogledaj kolekciju →</a>
                 </div>
 
                 <div class="kartica" onclick="window.location='svijece.html'">
-                    <img src="slike/pojedinacne/beba.jpg" alt="Pojedinačne svijeće">
+                    <img loading="lazy" decoding="async" src="slike/pojedinacne/beba.jpg" alt="Pojedinačne svijeće">
                     <h3>Svijeće</h3>
                     <p>Ručno rađene figure i oblici od prirodnog voska — dekoracija s dušom.</p>
                     <a class="kartica-upit" href="svijece.html">Pogledaj kolekciju →</a>
                 </div>
 
                 <div class="kartica" onclick="window.location='pokloni.html'">
-                    <img src="slike/poklon/srce_kutija_buket.jpg" alt="Poklon setovi">
+                    <img loading="lazy" decoding="async" src="slike/poklon/srce_kutija_buket.jpg" alt="Poklon setovi">
                     <h3>Pokloni & setovi</h3>
                     <p>Posebno složeni setovi za posebne trenutke — rođendani, godišnjice i sve prilike.</p>
                     <a class="kartica-upit" href="pokloni.html">Pogledaj kolekciju →</a>
@@ -168,7 +193,7 @@
                 <p class="o-nama-opis"><em>Jer svjetlost koja ostaje — uvijek pronađe put.</em></p>
             </div>
             <div class="o-nama-logo">
-                <img src="logo.png" alt="Lucha Candle Shop">
+                <img loading="lazy" decoding="async" src="logo.png" alt="Lucha Candle Shop">
             </div>
         </section>
 
